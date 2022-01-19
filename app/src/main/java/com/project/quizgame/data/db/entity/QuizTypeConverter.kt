@@ -1,4 +1,4 @@
-package com.project.quizgame.data.db.entites
+package com.project.quizgame.data.db.entity
 
 import androidx.room.TypeConverter
 import java.lang.IllegalStateException
@@ -45,4 +45,10 @@ class QuizTypeConverter {
             else -> throw IllegalStateException("Wrong QuizType data structure")
         }
     }
+
+    @TypeConverter
+    fun fromDifficultyToInt(difficulty: Difficulty) = Difficulty.values().indexOf(difficulty)
+
+    @TypeConverter
+    fun fromIntToDifficulty(index: Int) = Difficulty.values()[index]
 }

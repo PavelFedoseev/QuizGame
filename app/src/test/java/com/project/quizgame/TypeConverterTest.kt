@@ -1,7 +1,7 @@
 package com.project.quizgame
 
-import com.project.quizgame.data.db.entites.QuizType
-import com.project.quizgame.data.db.entites.QuizTypeConverter
+import com.project.quizgame.data.db.entity.QuizType
+import com.project.quizgame.data.db.entity.QuizTypeConverter
 import org.junit.Test
 
 class TypeConverterTest {
@@ -19,4 +19,6 @@ class TypeConverterTest {
         val convertFourResult = converterTest.fromStringToQuizType(fourString)
         assert(testFourAnswer == convertFourResult)
     }
+
+
 }
